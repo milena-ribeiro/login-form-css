@@ -1,0 +1,172 @@
+:root {
+  --text-base: #afb6c2;
+  --text-title: #d4ccb6;
+  --background: #191816;
+  --form-background: #24221f;
+  --primary-color: #ffc632;
+}
+/*body{
+  background-color: var(--background);
+}*/
+
+
+.titulo{
+  display: flex;
+  font-weight: 500;
+  color: var(--text-title);
+  
+}
+.texto{
+  font-weight: 400;
+  margin-top: 4px;
+  color: var(--text-base);
+  
+}
+.texto-color{
+  color: var(--primary-color);
+}
+.container{
+  background-color: var(--form-background);
+  padding: 25px;
+  margin: 25px;
+}
+
+/*.formulario{
+}*/
+.campo-form label{
+  display: block;
+  margin-top: 10px;
+}
+.campo-form input{
+  background-color: var(--form-background);
+  border: 1px solid var(--text-base);
+
+}
+.icon-email{
+           background-image: url(images/mail.svg);
+           background-repeat: no-repeat;
+  
+         
+}
+         
+.icon-senha{
+            background-image: url(images/lock.svg), url(images/eye.svg);
+            background-repeat: no-repeat;
+            background-position: left, right;
+            
+}
+label{
+  color: var(--text-base);
+}
+
+button{
+  background-color: var(--primary-color);
+  color: var(--form-background);
+}
+
+
+
+.icon-email:focus-within {
+  background-image: url(images/mail-focus.svg);
+   
+}
+/*.campo-form.email input[type=text] {
+  transition: border-size 0.6s;
+  padding: 12px 12px 12px 37px;
+  border-radius: 4px;
+  background-color: transparent;
+  border: solid 1px red;
+  color: var(--text-base);
+}*/
+
+.campo-form.text input[type=email]:focus-within {
+  border-color: var(--primary-color);
+  outline-color: var(--primary-color);
+
+  
+}
+.campo-form.text input[type=password]:focus-within {
+  border-color: var(--primary-color);
+  outline-color: var(--primary-color);
+  
+  
+}
+
+
+.icon-senha:focus-within {
+  background-image: url(images/lock-focus.svg);
+}
+.container-input.actions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.container-input.actions > .esqueci {
+  color: var(--primary-color);
+  font-weight: 500;
+  font-size: 14px;
+}
+.container-input.actions > .lembrar {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+.container-input.actions .container {
+  display: block;
+  position: relative;
+  padding-left: 26px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.container-input.actions .container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+  
+}
+.container-input.actions .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  border: solid 1px #868686;
+  border-radius: 4px;
+}
+.container-input.actions .container:hover input ~ .checkmark {
+  border: solid 1px #d4ccb6;
+}
+.container-input.actions .container input:checked ~ .checkmark {
+  background-color: #ffc632;
+  border-color: #ffc632;
+}
+.container-input.actions .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.container-input.actions .container input:checked ~ .checkmark:after {
+  display: block;
+}
+.container-input.actions .container .checkmark:after {
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid var(--background);
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+
+
+
+
